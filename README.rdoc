@@ -2,7 +2,7 @@
 
 This Capistrano task helps you with installing, configuring and controlling pushr on your server.
 
-For english documentation, put <tt>capistrano_pushr.rb<tt/> contents into your <tt>deploy.rb</tt> and run <tt>cap -T</tt>
+For english documentation, put <tt>capistrano_pushr.rb</tt> contents into your <tt>deploy.rb</tt> and run <tt>cap -T</tt>
  
 == Instalace
  
