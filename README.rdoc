@@ -1,0 +1,45 @@
+= Instalace a spusteni Pushr
+
+This Capistrano task helps you with installing, configuring and controlling pushr on your server.
+
+For english documentation, put <tt>capistrano_pushr.rb<tt/> contents into your <tt>deploy.rb</tt> and run <tt>cap -T</tt>
+ 
+== Instalace
+ 
+  cap pushr:install
+ 
+Nainstaluje pushr do adresare pushr u aplikace
+ 
+== Kontrola
+ 
+  cap pushr:check
+ 
+Vypise, zda jsou na serveru nainstalovany vsechny gemy
+ 
+== Konfigurace
+ 
+  cap pushr:configure
+ 
+Zepta se na nove prihlasovaci jmeno a heslo pro http pristup a vygeneruje konfiguracni soubor pro pushr
+ 
+  cap pushr:ssh:generate_key
+ 
+Vygeneruje novy klic bez hesla na serveru
+ 
+  cap pushr:ssh:authorize_key
+ 
+Umozni, aby se uzivatel na serveru (deployer) sshckoval sam na sebe (aby slo spustit capistrano)
+ 
+  cap pushr:ssh:get_public_key
+ 
+Zobrazi verejnou cast ssh klice - pro ulozeni na githubu
+ 
+== Spusteni a zastaveni pushr
+ 
+  cap pushr:start
+ 
+Spusti pushr
+ 
+  cap pushr:stop
+ 
+Zastavi pushr
