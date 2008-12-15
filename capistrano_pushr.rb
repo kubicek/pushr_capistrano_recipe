@@ -19,6 +19,8 @@ namespace :pushr do
   task :configure do
     set :http_auth_username, Capistrano::CLI.ui.ask("Enter new user name for http access: ")
     set :http_auth_password, Capistrano::CLI.password_prompt("Enter new password for http access: ")
+    set :twitter_username, Capistrano::CLI.ui.ask("Your twitter username: ")
+    set :twitter_password, Capistrano::CLI.password_prompt("Enter twitter password: ")
     pushr_configuration =<<-EOF
 application: #{application}
 
@@ -28,6 +30,10 @@ password: #{http_auth_password}
 
 # Full path to your Rails application, eg. "/var/www/my_rails_app"
 path: #{deploy_to}
+
+twitter:
+  username: '#{twitter_username}'
+  password: '#{twitter_password}' 
 EOF
     put pushr_configuration, "#{pushr_path}/config.yml"
   end
