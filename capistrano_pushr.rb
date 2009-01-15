@@ -10,6 +10,11 @@ namespace :pushr do
   task :install do
     run "git clone git://github.com/karmi/pushr.git #{pushr_path}"
   end
+
+  desc "Update pushr"
+  task :update do
+    run "cd #{pushr_path}; git pull origin master"
+  end
   
   task :check do
     run "cd #{pushr_path}; rake app:check"
