@@ -43,3 +43,9 @@ Spusti pushr
   cap pushr:stop
  
 Zastavi pushr
+
+== Aktualizace
+
+  cap pushr:update
+
+Aktualizuje pushr na nejnovejsi verzi
