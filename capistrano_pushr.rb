@@ -52,6 +52,12 @@ EOF
   task :stop do
     run "cd #{pushr_path}; rake stop"
   end
+
+  desc "Restart pushr"
+  task :restart do
+    stop
+    start
+  end
   
   namespace :ssh do
     desc "Generate ssh key"

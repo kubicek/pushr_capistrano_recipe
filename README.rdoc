@@ -44,6 +44,10 @@ Spusti pushr
  
 Zastavi pushr
 
+  cap pushr:restart
+
+Restartuje pushr
+
 == Aktualizace
 
   cap pushr:update
